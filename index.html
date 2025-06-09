@@ -6,11 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ScentsForCents</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
 </head>
 <style>
     body {
         height: 100%;
         background-color: #dfdace;
+    }
+
+    #menu-toggle {
+        display: none;
     }
 
     #menu-toggle:checked+label+div#menu-links {
@@ -23,18 +30,33 @@
         color: #3b82f6;
         border-style: outset;
     }
+
+    .logo {
+        font-family: "Dancing Script", cursive;
+        font-optical-sizing: larger;
+        font-weight: bolder;
+        font-style: normal;
+        font-size: 22px;
+
+    }
 </style>
 
 <body class="flex flex-col min-h-screen bg-[#f9f5ee] text-gray-900 font-serif">
-    <header>
-        <nav class="sticky top-0 w-full z-10 hidden md:flex space-x-6 text-sm font-medium">
+    <header class="sticky">
+        <nav class=" top-0 w-full z-10 hidden md:flex space-x-6 text-sm font-medium">
             <div class="container mx-auto px-2 flex justify-between items-center flex-wrap">
 
                 <a href="index.html" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
-                    <img src="/images/logoname3.png" class="h-12 w-full rounded-lg" alt="ScentsForCents Logo" />
-
+                    <h1 class="logo">Scents For Cents <br>Perfume Shop</h1>
                 </a>
+                <input type="checkbox" id="menu-toggle" class="peer">
 
+                <label for="menu-toggle" class="md:hidden cursor-pointer p-2 rounded-md hover:bg-gray-100">
+                    <svg class="w-6 h-6 text-gray-700" fill="none" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                        <path d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </label>
 
                 <div id="menu-links" class="hidden w-full bg-white shadow-sm py-2 flex-col
                         md:static md:flex md:w-auto md:shadow-none md:bg-transparent md:py-0 
@@ -42,12 +64,10 @@
                     <a href="index.html"
                         class="block w-full text-center md:w-auto text-gray-800 hover:text-blue-600 px-3 py-3 md:py-2 rounded-md text-sm font-medium nav-link nav-link-active">Home</a>
                     <a href="about.html"
-                        class="block w-full text-center md:w-auto text-gray-800 hover:text-blue-600 px-3 py-3 md:py-2 rounded-md text-sm font-medium nav-link">About
-                        Us</a>
-                    <a href="categories.html"
-                        class="block w-full text-center md:w-auto text-gray-800 hover:text-blue-600 px-3 py-3 md:py-2 rounded-md text-sm font-medium nav-link">Categories</a>
+                        class="block w-full text-center md:w-auto text-gray-800 hover:text-blue-600 px-3 py-3 md:py-2 rounded-md text-sm font-medium nav-link">Our
+                        Story</a>
                     <a href="products.html"
-                        class="block w-full text-center md:w-auto text-gray-800 hover:text-blue-600 px-3 py-3 md:py-2 rounded-md text-sm font-medium nav-link">Products</a>
+                        class="block w-full text-center md:w-auto text-gray-800 hover:text-blue-600 px-3 py-3 md:py-2 rounded-md text-sm font-medium nav-link">Collection</a>
                     <a href="testimonials.html"
                         class="block w-full text-center md:w-auto text-gray-800 hover:text-blue-600 px-3 py-3 md:py-2 rounded-md text-sm font-medium nav-link">Testimonials</a>
                     <a href="contact.html"
@@ -64,17 +84,31 @@
 
     </header>
     <main>
-        <section>
+        <section class="flex flex-col md:flex-row items-center px-8 py-14 relative">
             <!-- image -->
             <div class="md:w-1/2 mt-10 md:mt-0">
-                <img src="/images/prada paradoxe.jpg" alt="prada.png" class="max-w-md w-full mx-auto">
+                <img src="/images/prada paradoxe.jpg" alt="prada.png" class="max-w-md w-full mx-auto rounded-full">
             </div>
-        </section>
-        <section>
-            <div class="absolute top-20 right-40 border border-black rounded-full px-6 py-4 text-xs font-medium text-center">
-                Prada Paradoxe
+            <div class="md:w-1/2 space-y-6">
+                <h1 class="text-4xl md:text-5xl font-bold leading-tight">Sparkle Your Day <br>With A Vanilla
+                    Scent</h1>
+                <p class="text-gray-700 pb-6">
+                    Pamper yourself with a natural scent that lasts 8+ hours.
+                    It aims to celebrate the multifaceted nature of women, encompassing strength
+                    and softness, boldness and sophistication, and classicism and modernity.
+                </p>
+                <button class="bg-blue-700 text-white px-6 py-2 rounded-shadow hover:bg-blue-800 ml-80 rounded-lg">
+                    Read More
+                </button>
             </div>
+
+            <div
+                class="absolute top-10  right-80  border border-black rounded-full px-6 py-4 text-xs font-medium text-center">
+                <h1>PRADA PARADOXE</h1>
+            </div>
+
         </section>
+
     </main>
 
 
