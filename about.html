@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScentsForCents</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<style>
+    body {
+        height: 100%;
+        background-color: #dfdace;
+    }
+
+    #menu-toggle {
+        display: none;
+    }
+
+    #menu-toggle:checked+label+div#menu-links {
+        display: flex;
+    }
+
+    .nav-link-active {
+        border-bottom-width: 2px;
+        border-bottom-color: rgb(62, 85, 199);
+        color: #3b82f6;
+        border-style: outset;
+    }
+
+    .logo {
+        font-family: "Dancing Script", cursive;
+        font-optical-sizing: larger;
+        font-weight: bolder;
+        font-style: normal;
+        font-size: 22px;
+
+    }
+
+    #title h1 {
+        font-family: "Cinzel", serif;
+        font-optical-sizing: auto;
+        font-weight: bolder;
+        font-style: normal;
+    }
+
+    #title p {
+
+    }
+</style>
+
+<body class="flex flex-col min-h-screen bg-[#f9f5ee] text-gray-900 font-serif">
+    <header class="sticky">
+        <nav class=" top-0 w-full z-10 hidden md:flex space-x-6 text-sm font-medium">
+            <div class="container mx-auto px-2 flex justify-between items-center flex-wrap">
+
+                <a href="index.html" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+                    <h1 class="logo">Scents For Cents <br>Perfume Shop</h1>
+                </a>
+                <input type="checkbox" id="menu-toggle" class="peer">
+
+                <label for="menu-toggle" class="md:hidden cursor-pointer p-2 rounded-md hover:bg-gray-100">
+                    <svg class="w-6 h-6 text-gray-700" fill="none" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                        <path d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </label>
+
+                <div id="menu-links" class="hidden w-full bg-white shadow-sm py-2 flex-col
+                        md:static md:flex md:w-auto md:shadow-none md:bg-transparent md:py-0 
+                        md:flex-row md:items-center md:space-x-12">
+                    <a href="index.html"
+                        class="block w-full text-center md:w-auto text-gray-800 hover:text-blue-600 px-3 py-3 md:py-2 rounded-md text-sm font-medium nav-link">Home</a>
+                    <a href="about.html"
+                        class="block w-full text-center md:w-auto text-gray-800 hover:text-blue-600 px-3 py-3 md:py-2 rounded-md text-sm font-medium nav-link nav-link-active">Our
+                        Story</a>
+                    <a href="products.html"
+                        class="block w-full text-center md:w-auto text-gray-800 hover:text-blue-600 px-3 py-3 md:py-2 rounded-md text-sm font-medium nav-link">Collection</a>
+                    <a href="testimonials.html"
+                        class="block w-full text-center md:w-auto text-gray-800 hover:text-blue-600 px-3 py-3 md:py-2 rounded-md text-sm font-medium nav-link">Testimonials</a>
+                    <a href="contact.html"
+                        class="block w-full text-center md:w-auto text-gray-800 hover:text-blue-600 px-3 py-3 md:py-2 rounded-md text-sm font-medium nav-link">Contact
+                        Us</a>
+                </div>
+                <div class="flex items-center text-lg space-x-20">
+                    <span>🔍</span>
+                    <span>🛒</span>
+                    <span>👤</span>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <main>
+        <section class="flex flex-col md:flex-row items-center px-8 py-14 relative">
+            <div id="title">
+                <h1 class="text-4xl">All about Scents For Cents...</h1>
+                <h2 class="pt-6 pb-3"><u>OUR HISTORY</u></h2>
+                <p>
+                    My journey with perfumes began when I was just in primary school,
+                    I used to talk about perfumes to my peers at school and when I came home from
+                    school, I would tell my parents all about it. During long holidays I would take
+                    my time and visit malls and browse through shops that sell original perfumes.
+                    I would ask the shop stewards about their sources however some would ignore and
+                    this would just make me feel discouraged.
+                    I thought about how I would easily get access to networks effectively and at the
+                    comfort of my home.
+                    Whenever I sought for permission to access the internet from my parents or even
+                    access the gadgets,
+                    I would browse for perfume warehouses and send them emails by the help of my parents.
+                    After of doing
+                    that, I got responses from several perfumery warehouses.
+                    In the long run, I faced challenges like “which markets should I begin with?
+                    Where can I source for
+                    funds? How can I ship the products?”
+                    My parents were my main supporters in this. They managed to help me solve my problems. My idea was
+                    to target all age groups. My parents contributed financially. I was able to acquire
+                    networks from
+                    the United States of America and United Kingdom. My parents helped me in making
+                    orders and getting
+                    access to ship them. I began with just five and I got customers from my parent's
+                    friends. I made
+                    sales and began shipping in more as time went by. I was able to manage my education
+                    in high school
+                    and the business. My biggest achievement was that I was able to make sales in
+                    Botswana, Uganda and
+                    Rwanda through my parent's networks.
+                    I realized a challenge “How can I be boundaryless and 24 by 7?” So that's when
+                    I thought about
+                    creating a website that a customer can reach out to Scents for Cents Perfumes from
+                    anywhere in the
+                    world at any time and get affordable perfumes and colognes. The website is a one
+                    stop shop that will
+                    provide a customer with an experience of a physical shop but at the comfort of
+                    their home. They will
+                    interact with me, ask questions and complete a transaction and the product delivered
+                    safely in the
+                    shortest time possible.
+
+                </p>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
