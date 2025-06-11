@@ -40,41 +40,17 @@
 
     }
 
-    /* Custom CSS for animation */
-    @keyframes slide {
-        0% {
-            transform: translateX(0%);
-        }
-
-        25% {
-            transform: translateX(-100%);
-        }
-
-        50% {
-            transform: translateX(-200%);
-        }
-
-        75% {
-            transform: translateX(-300%);
-        }
-
-        100% {
-            transform: translateX(0%);
-        }
-    }
-
-    .slideshow {
-        animation: slide 12s infinite;
-    }
 </style>
 
 <body class="flex flex-col min-h-screen bg-[#f9f5ee] text-gray-900 font-serif">
     <header>
-        <nav id="navbar" class="shadow-md top-0 w-full z-10 space-x-6 text-sm font-medium">
+        <nav id="navbar" class="fixed shadow-md top-0 w-full z-10 space-x-6 text-sm font-medium">
             <div class="container mx-auto px-2 flex justify-between items-center flex-wrap">
 
-                <a href="index.html" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
-                    <h1 class="logo">Scents For Cents <br>Perfume Shop</h1>
+                <a href="#" class="flex items-center mb-6 text-2xl font-semibold text-gray-900">
+                    <img class="w-10 h-10 mr-2 mt-2 rounded-full" src="images/logo.jpg"
+                        alt="logo">
+                    ScentsForCents
                 </a>
                 <input type="checkbox" id="menu-toggle" class="peer">
 
