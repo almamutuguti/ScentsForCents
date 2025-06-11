@@ -42,8 +42,8 @@
 </style>
 
 <body class="flex flex-col min-h-screen bg-[#f9f5ee] text-gray-900 font-serif">
-    <header class="sticky">
-        <nav class=" top-0 w-full z-10 hidden md:flex space-x-6 text-sm font-medium">
+    <header>
+        <nav id="navbar" class="shadow-md top-0 w-full z-10 space-x-6 text-sm font-medium">
             <div class="container mx-auto px-2 flex justify-between items-center flex-wrap">
 
                 <a href="index.html" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
@@ -74,7 +74,7 @@
                         class="block w-full text-center md:w-auto text-gray-800 hover:text-blue-600 px-3 py-3 md:py-2 rounded-md text-sm font-medium nav-link">Contact
                         Us</a>
                 </div>
-                <div class="flex items-center text-lg space-x-20">
+                <div class="flex items-center text-lg space-x-10">
                     <span>🔍</span>
                     <span>🛒</span>
                     <span>👤</span>
@@ -83,5 +83,42 @@
         </nav>
 
     </header>
+
+    <main>
+        <section>
+
+        </section>
+    </main>
+        <footer class="bg-white shadow-sm dark:bg-gray-900 m-0">
+        <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <a href="https://flowbite.com/" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+                    <img src="/images/logoname3.png" class="h-50 w-60 rounded-lg" alt="Flowbite Logo" />
+                    <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Scents For
+                        Cents</span>
+                </a>
+                <ul
+                    class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+                    <li>
+                        <a href="about.html" class="hover:underline me-4 md:me-6">About</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
+                    </li>
+                    <li>
+                        <a href="contact.html" class="hover:underline">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+            <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2025 <a href="#"
+                    class="hover:underline">ScentsForCents™</a>. All Rights Reserved.</span>
+        </div>
+    </footer>
+
 </body>
+
 </html>
