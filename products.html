@@ -41,13 +41,12 @@
 
 <body class="flex flex-col min-h-screen bg-[#f9f5ee] text-gray-900 font-serif">
     <header>
-        <nav id="navbar" class="shadow-md top-0 w-full z-10 space-x-6 text-sm font-medium">
-            <div class="container mx-auto px-2 flex justify-between items-center flex-wrap">
+        <nav id="navbar" class="shadow-md top-0 w-full z-20 space-x-6 text-sm font-medium fixed bg-[#f6f4f1]">
+            <div class="container mx-auto p-0 px-2 flex justify-between items-center flex-wrap">
 
-                <a href="#" class="flex items-center mb-6 text-2xl font-semibold text-gray-900">
-                    <img class="w-10 h-10 mr-2 mt-2 rounded-full" src="images/logo.jpg"
-                        alt="logo">
-                    ScentsForCents
+                <a href="#" class="flex items-center  text-2xl font-semibold text-gray-900">
+                    <img class="w-10 h-10 mr-2 mt-2 rounded-full" src="images/logo.jpg" alt="logo">
+                    <p id="logoname">ScentsForCents</p>
                 </a>
                 <input type="checkbox" id="menu-toggle" class="peer">
 
@@ -58,16 +57,16 @@
                     </svg>
                 </label>
 
-                <div id="menu-links" class="hidden w-full bg-white shadow-sm py-2 flex-col
+                <div id="menu-links" class=" mt-0 hidden w-full bg-white shadow-sm py-0 flex-col
                         md:static md:flex md:w-auto md:shadow-none md:bg-transparent md:py-0 
                         md:flex-row md:items-center md:space-x-12">
                     <a href="index.html"
-                        class="block w-full text-center md:w-auto text-gray-800 hover:text-blue-600 px-3 py-3 md:py-2 rounded-md text-sm font-medium nav-link nav-link-active">Home</a>
+                        class="block w-full text-center md:w-auto text-gray-800 hover:text-blue-600 px-3 py-3 md:py-2 rounded-md text-sm font-medium nav-link">Home</a>
                     <a href="about.html"
-                        class="block w-full text-center md:w-auto text-gray-800 hover:text-blue-600 px-3 py-3 md:py-2 rounded-md text-sm font-medium nav-link">Our
+                        class="block w-full text-center md:w-auto text-gray-800 hover:text-blue-600 px-3 py-3 md:py-2 rounded-md text-sm font-medium nav-link ">Our
                         Story</a>
                     <a href="products.html"
-                        class="block w-full text-center md:w-auto text-gray-800 hover:text-blue-600 px-3 py-3 md:py-2 rounded-md text-sm font-medium nav-link">Collection</a>
+                        class="block w-full text-center md:w-auto text-gray-800 hover:text-blue-600 px-3 py-3 md:py-2 rounded-md text-sm font-medium nav-link nav-link-active">Collection</a>
                     <a href="testimonials.html"
                         class="block w-full text-center md:w-auto text-gray-800 hover:text-blue-600 px-3 py-3 md:py-2 rounded-md text-sm font-medium nav-link">Testimonials</a>
                     <a href="contact.html"
@@ -75,13 +74,12 @@
                         Us</a>
                 </div>
                 <div class="flex items-center text-lg space-x-10">
-                    <span>🔍</span>
+                    <span>FAQs</span>
                     <span>🛒</span>
                     <span>👤</span>
                 </div>
             </div>
         </nav>
-
     </header>
 
     <main>

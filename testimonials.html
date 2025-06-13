@@ -9,11 +9,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <style>
     body {
-        height: 100%;
         background-color: #dfdace;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Raleway' sans-serif;
     }
 
     #menu-toggle {
@@ -37,17 +43,202 @@
         font-weight: 600;
         font-style: normal;
     }
+
+    .testimonials {
+        background-color: #fafbfc8e;
+        padding: 5rem 0;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .testimonials-top,
+    .testimonials-container {
+        padding: 0 1rem;
+    }
+
+    .testimonials-top {
+        text-align: center;
+    }
+
+    .testimonials-top h1 {
+        font-size: 2rem;
+        color: #071e55;
+        margin-bottom: 1rem;
+        line-height: 2rem;
+        letter-spacing: 0.05rem;
+    }
+
+    .testimonials-top p {
+        color: #7c8595;
+        font-size: 1.1rem;
+
+    }
+
+    .testimonials-item img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 10px solid #fff;
+        box-shadow: rgba(0, 0, 0, 0.15) 4px 4px 10px;
+        z-index: 99;
+    }
+
+    .testimonialsitem-info {
+        background-color: #fff;
+        padding: 5.5rem 2rem 2rem 2rem;
+        margin-left: -0rem;
+        box-shadow: rgba(0, 0, 0, 0.15) 4px 4px 10px;
+    }
+
+    .testimonials-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1rem;
+
+    }
+
+    .testimonials-container {
+        display: flex;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .testimonialsitem-info p {
+        color: #7c8595;
+        font-style: italic;
+        line-height: 1.5rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .testimonialsitem-info h6 {
+        color: #1e90ff;
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .testimonialsitem-rating {
+        text-align: center;
+        color: #fdcc28;
+    }
+
+    .reviews {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 547px;
+        width: 100%;
+        border-radius: 10px;
+        background-color: white;
+        padding: 25px 0 69px 0;
+        margin: 0 auto;
+    }
+
+    .reviews-heading {
+        font-size: 32px;
+        color: #323357;
+        font-weight: 700;
+        font-family: "Muli";
+        text-align: center;
+        margin: 28px 0;
+
+    }
+
+    .reviewsaverage-rating {
+        margin-bottom: 63px;
+    }
+
+    .averageratings-star {
+        display: flex;
+        align-items: center;
+        padding: 0 25px;
+        width: 347px;
+        height: 63px;
+        border-radius: 32px;
+        background-color: #f5f8ff;
+        margin-bottom: 8px;
+    }
+
+    .averageratings-score {
+        font-size: 16px;
+        color: #323357;
+        font-weight: 400;
+        font-family: "Muli";
+        margin-left: auto;
+
+    }
+
+    .averageratings-totalcustomers {
+        font-size: 16px;
+        color: #595b71;
+        font-weight: 400;
+        font-family: "Muli";
+        text-align: center;
+    }
+
+    .reviews-breakdown {
+        display: flex;
+        margin-bottom: 44px;
+
+    }
+
+    .reviews-breakdown-wrapper {
+        margin: 0 auto;
+
+    }
+
+    .reviews-single-star-average {
+        display: flex;
+        margin: 22px 0;
+    }
+
+    .reviews-single-star-amount {
+        font-size: 18px;
+        color: #2a5bda;
+        font-weight: 400;
+        font-family: "Muli";
+        text-align: center;
+    }
+
+    .single-star-progress-bar {
+        width: 280px;
+        border-radius: 10px;
+        background-color: #f5f8ff;
+        padding: 1px;
+        margin: 0 10px;
+    }
+
+    .progress-bar-data {
+        width: 100%;
+        height: 100px;
+        padding: 2px;
+        appearance: none;
+        border: none;
+    }
+
+    @media (max-width: 786px) {
+        .testimonials-container {
+            flex-direction: column;
+        }
+    }
 </style>
 
 <body class="flex flex-col min-h-screen bg-[#f9f5ee] text-gray-900 font-serif">
-        <header>
-        <nav id="navbar" class="shadow-md top-0 w-full z-10 space-x-6 text-sm font-medium">
-            <div class="container mx-auto px-2 flex justify-between items-center flex-wrap">
+    <header>
+        <nav id="navbar" class="shadow-md top-0 w-full z-20 space-x-6 text-sm font-medium fixed bg-[#f6f4f1]">
+            <div class="container mx-auto p-0 px-2 flex justify-between items-center flex-wrap">
 
-                <a href="#" class="flex items-center mb-6 text-2xl font-semibold text-gray-900">
-                    <img class="w-10 h-10 mr-2 mt-2 rounded-full" src="images/logo.jpg"
-                        alt="logo">
-                    ScentsForCents
+                <a href="#" class="flex items-center  text-2xl font-semibold text-gray-900">
+                    <img class="w-10 h-10 mr-2 mt-2 rounded-full" src="images/logo.jpg" alt="logo">
+                    <p id="logoname">ScentsForCents</p>
                 </a>
                 <input type="checkbox" id="menu-toggle" class="peer">
 
@@ -58,32 +249,142 @@
                     </svg>
                 </label>
 
-                <div id="menu-links" class="hidden w-full bg-white shadow-sm py-2 flex-col
+                <div id="menu-links" class=" mt-0 hidden w-full bg-white shadow-sm py-0 flex-col
                         md:static md:flex md:w-auto md:shadow-none md:bg-transparent md:py-0 
                         md:flex-row md:items-center md:space-x-12">
                     <a href="index.html"
-                        class="block w-full text-center md:w-auto text-gray-800 hover:text-blue-600 px-3 py-3 md:py-2 rounded-md text-sm font-medium nav-link nav-link-active">Home</a>
+                        class="block w-full text-center md:w-auto text-gray-800 hover:text-blue-600 px-3 py-3 md:py-2 rounded-md text-sm font-medium nav-link">Home</a>
                     <a href="about.html"
                         class="block w-full text-center md:w-auto text-gray-800 hover:text-blue-600 px-3 py-3 md:py-2 rounded-md text-sm font-medium nav-link">Our
                         Story</a>
                     <a href="products.html"
                         class="block w-full text-center md:w-auto text-gray-800 hover:text-blue-600 px-3 py-3 md:py-2 rounded-md text-sm font-medium nav-link">Collection</a>
                     <a href="testimonials.html"
-                        class="block w-full text-center md:w-auto text-gray-800 hover:text-blue-600 px-3 py-3 md:py-2 rounded-md text-sm font-medium nav-link">Testimonials</a>
+                        class="block w-full text-center md:w-auto text-gray-800 hover:text-blue-600 px-3 py-3 md:py-2 rounded-md text-sm font-medium nav-link nav-link-active">Testimonials</a>
                     <a href="contact.html"
                         class="block w-full text-center md:w-auto text-gray-800 hover:text-blue-600 px-3 py-3 md:py-2 rounded-md text-sm font-medium nav-link">Contact
                         Us</a>
                 </div>
                 <div class="flex items-center text-lg space-x-10">
-                    <span>🔍</span>
+                    <span>FAQs</span>
                     <span>🛒</span>
                     <span>👤</span>
                 </div>
             </div>
         </nav>
-
     </header>
-           <footer class="p-4 bg-white sm:p-6 shadow-md rounded-lg">
+    <main>
+        <section class="testimonials">
+            <div class="conatiner">
+                <!-- top -->
+                <div class="testimonials-top">
+                    <h1>Clients Testimonials</h1>
+                    <p>What are people saying?</p>
+                </div>
+
+                <div class="testimonials-container">
+                    <!-- single testimonial -->
+                    <div class="testimonials-item">
+                        <img src="/images/photo.avif" alt="image.jpg">
+
+                        <div class="testimonialsitem-info">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Provident veniam blanditiis at? Distinctio odio perferendis illo eveniet
+                                incidunt officia sed accusantium labore ipsam aperiam dignissimos delectus,
+                                amet molestiae, neque sequi?
+                            </p>
+
+                            <h6>Emily Richards -Copywriter</h6>
+
+                            <div class="testimonialsitem-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- single testimonial -->
+                    <div class="testimonials-item">
+                        <img src="/images/photo.avif" alt="image.jpg">
+
+                        <div class="testimonialsitem-info">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Provident veniam blanditiis at? Distinctio odio perferendis illo eveniet
+                                incidunt officia sed accusantium labore ipsam aperiam dignissimos delectus,
+                                amet molestiae, neque sequi?
+                            </p>
+
+                            <h6>John Doe -Senior officer</h6>
+
+                            <div class="testimonialsitem-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- single testimonial -->
+                    <div class="testimonials-item">
+                        <img src="/images/photo.avif" alt="image.jpg">
+
+                        <div class="testimonialsitem-info">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Provident veniam blanditiis at? Distinctio odio perferendis illo eveniet
+                                incidunt officia sed accusantium labore ipsam aperiam dignissimos delectus,
+                                amet molestiae, neque sequi?
+                            </p>
+
+                            <h6>Peter Pan -General Manager</h6>
+
+                            <div class="testimonialsitem-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="reviews">
+                <h4 class="reviews-heading">CUstomer Reviews</h4>
+
+                <div class="reviewsaverage-rating">
+                    <div class="averageratings-star">
+                        <span class="averageratings-score">4.7 out of 5.0</span>
+                    </div>
+
+                    <div class="averageratings-totalcustomers">
+                        40 Customer ratings
+                    </div>
+
+                    <div class="reviews-breakdown">
+                        <div class="reviews-breakdown-wrapper">
+                            <div class="reviews-single-star-average">
+                                <div class="reviews-single-star-amount">5 star</div>
+                                <div class="single-star-progress-bar">
+                                    <progress class="progress-bar-data" max="100" value="84"></progress>
+                                </div>
+                                <div class="single-star-average-percent">84%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="p-4 bg-white sm:p-6 shadow-md rounded-lg">
         <div class="mx-auto max-w-screen-xl border-solid border-black">
             <div class="md:flex md:justify-between">
                 <div class="mb-6 md:mb-0">
@@ -134,4 +435,5 @@
         </div>
     </footer>
 </body>
+
 </html>
