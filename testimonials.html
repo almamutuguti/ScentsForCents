@@ -85,7 +85,7 @@
         border-radius: 50%;
         border: 10px solid #fff;
         box-shadow: rgba(0, 0, 0, 0.15) 4px 4px 10px;
-        z-index: 99;
+        /* z-index: 99; */
     }
 
     .testimonialsitem-info {
@@ -130,25 +130,33 @@
         color: #fdcc28;
     }
 
+    .part {
+        padding: 5.5rem 2rem 2rem 2rem;
+        margin-left: -0rem;
+        box-shadow: rgba(0, 0, 0, 0.15) 4px 4px 10px;
+    }
+
     .reviews {
         display: flex;
         flex-direction: column;
         align-items: center;
-        max-width: 547px;
+        max-width: 540px;
         width: 100%;
         border-radius: 10px;
         background-color: white;
-        padding: 25px 0 69px 0;
+        padding: 5.5rem 2rem 2rem 2rem;
         margin: 0 auto;
+        box-shadow: rgba(0, 0, 0, 0.15) 4px 4px 10px;
+        
     }
 
     .reviews-heading {
-        font-size: 32px;
+        font-size: 30px;
         color: #323357;
-        font-weight: 700;
+        font-weight: 600;
         font-family: "Muli";
         text-align: center;
-        margin: 28px 0;
+        margin: 4px 0;
 
     }
 
@@ -182,6 +190,7 @@
         font-weight: 400;
         font-family: "Muli";
         text-align: center;
+        padding: 0;
     }
 
     .reviews-breakdown {
@@ -218,10 +227,41 @@
 
     .progress-bar-data {
         width: 100%;
-        height: 100px;
-        padding: 2px;
+        height: 15px;
+        padding: 1px;
         appearance: none;
         border: none;
+    }
+
+    .progress-bar-data[value]::-webkit-progress-bar {
+        background-color: #f5f8ff;
+        border-radius: 10px;
+    }
+
+    .progress-bar-data[value]::-webkit-progress-value {
+        border-radius: 8px;
+        filter: drop-shadow(0px 4px 4px rgba(255, 204, 72, 0.53));
+        background-color: #ffcc48;
+
+    }
+
+    .single-star-average-percent {
+        font-size: 18px;
+        color: #323357;
+        font-weight: 400;
+        font-family: "Muli";
+    }
+
+    .calculation-info-desc {
+        font-size: 16px;
+        color: #2a5bda;
+        font-weight: 400;
+        font-family: "Muli";
+    }
+
+    .star-single {
+       color: #fdcc28;
+       margin: 0 10px;
     }
 
     @media (max-width: 786px) {
@@ -355,12 +395,19 @@
             </div>
         </section>
 
-        <section>
+        <section class="part">
             <div class="reviews">
-                <h4 class="reviews-heading">CUstomer Reviews</h4>
+                <h4 class="reviews-heading">Customer Reviews</h4>
 
                 <div class="reviewsaverage-rating">
                     <div class="averageratings-star">
+                        <div class="star-single">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
                         <span class="averageratings-score">4.7 out of 5.0</span>
                     </div>
 
@@ -377,7 +424,39 @@
                                 </div>
                                 <div class="single-star-average-percent">84%</div>
                             </div>
+                            <div class="reviews-single-star-average">
+                                <div class="reviews-single-star-amount">4 star</div>
+                                <div class="single-star-progress-bar">
+                                    <progress class="progress-bar-data" max="100" value="9"></progress>
+                                </div>
+                                <div class="single-star-average-percent">9%</div>
+                            </div>
+                            <div class="reviews-single-star-average">
+                                <div class="reviews-single-star-amount">3 star</div>
+                                <div class="single-star-progress-bar">
+                                    <progress class="progress-bar-data" max="100" value="4"></progress>
+                                </div>
+                                <div class="single-star-average-percent">4%</div>
+                            </div>
+                            <div class="reviews-single-star-average">
+                                <div class="reviews-single-star-amount">2 star</div>
+                                <div class="single-star-progress-bar">
+                                    <progress class="progress-bar-data" max="100" value="2"></progress>
+                                </div>
+                                <div class="single-star-average-percent">2%</div>
+                            </div>
+                            <div class="reviews-single-star-average">
+                                <div class="reviews-single-star-amount">1 star</div>
+                                <div class="single-star-progress-bar">
+                                    <progress class="progress-bar-data" max="100" value="1"></progress>
+                                </div>
+                                <div class="single-star-average-percent">1%</div>
+                            </div>
                         </div>
+                    </div>
+
+                    <div class="reviews-calculation-info">
+                        <span class="calculation-info-desc">How do we calculate ratings?</span>
                     </div>
                 </div>
             </div>
