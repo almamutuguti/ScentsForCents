@@ -45,6 +45,7 @@
         font-style: normal;
     }
 </style>
+
 <body class="flex flex-col min-h-screen bg-[#f9f5ee] text-gray-900 font-serif">
     <header>
         <nav id="navbar" class="shadow-md top-0 w-full z-20 space-x-6 text-sm font-medium fixed bg-[#f6f4f1]">
@@ -72,22 +73,56 @@
                         class="block w-full text-center md:w-auto text-gray-800 hover:text-blue-600 px-3 py-3 md:py-2 rounded-md text-sm font-medium nav-link">Our
                         Story</a>
                     <a href="products.html"
-                        class="block w-full text-center md:w-auto text-gray-800 hover:text-blue-600 px-3 py-3 md:py-2 rounded-md text-sm font-medium nav-link">Collection
-                    </a>
+                        class="block w-full text-center md:w-auto text-gray-800 hover:text-blue-600 px-3 py-3 md:py-2 rounded-md text-sm font-medium nav-link">Collection</a>
                     <a href="testimonials.html"
                         class="block w-full text-center md:w-auto text-gray-800 hover:text-blue-600 px-3 py-3 md:py-2 rounded-md text-sm font-medium nav-link">Testimonials</a>
                     <a href="contact.html"
-                        class="block w-full text-center md:w-auto text-gray-800 hover:text-blue-600 px-3 py-3 md:py-2 rounded-md text-sm font-medium nav-link nav-link-active">Contact
+                        class="block w-full text-center md:w-auto text-gray-800 hover:text-blue-600 px-3 py-3 md:py-2 rounded-md text-sm font-medium nav-link">Contact
                         Us</a>
                 </div>
                 <div class="flex items-center text-lg space-x-10">
                     <span><a href="/FAQs.html">FAQs</a></span>
                     <span><i class="fa-solid fa-cart-shopping"></i></span>
-                    <span><a href="/account.html"><i class="fa-solid fa-user"></i></a></span>
+                    <span><i class="fa-solid fa-user"><a href="/account.html"></a></i></span>
                 </div>
             </div>
         </nav>
 
     </header>
+
+    <main>
+        <section class="main">
+            <div class="register">
+                <h1>Sign Up here</h1>
+                <form id="regiser" method="post">
+                    <label>First Name :</label>
+                    <br>
+                    <input type="text" name="fname" id="name" placeholder="Enter Your First name">
+                    <br><br>
+                    <label>Last Name :</label>
+                    <br>
+                    <input type="text" name="lname" id="name" placeholder="Enter Your First name">
+                    <br><br>
+                    <label>Email :</label>
+                    <br>
+                    <input type="temail" name="email" id="name" placeholder="Enter Your Valid email">
+                    <br><br>
+                    <label>Create Password :</label>
+                    <br>
+                    <input type="password" name="password" id="password" placeholder="Create a password">
+                    <br><br>
+                    <label>Confirm Password :</label>
+                    <br>
+                    <input type="password" name="password" id="password" placeholder="Confirm password">
+                    <br><br>
+
+                    <input type="submit" value="submit" name="submit" id="submit">
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer></footer>
 </body>
+
 </html>
