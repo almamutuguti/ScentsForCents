@@ -44,7 +44,73 @@
         font-weight: 600;
         font-style: normal;
     }
+
+    .section-faq {
+        max-width: 75%;
+        margin: auto;
+        
+    }
+
+    .section-faq h1{
+        font-size: 46px;
+        margin: 1.5rem 0;
+        text-align: center;
+        letter-spacing: 3px;
+        margin-top: 100px;
+        font-weight: 400;
+    }
+
+    .accordion {
+        background-color: rgba(0, 0, 0, 0.361);
+        color: whitesmoke;
+        cursor: pointer;
+        font-size: 1.2rem;
+        width: 100%;
+        padding: 2rem 2.5rem;
+        border: none;
+        outline: none;
+        transition: 0.4s;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: bold;
+    }
+
+    .accordion i {
+        font-size: 1.6rem;
+    }
+
+    .active,
+    .accordion:hover {
+        background-color: rgba(0, 0, 0, 0.648);
+        color: whitesmoke;
+    }
+
+    .answer {
+        padding: 0 18px;
+        background-color: rgb(245, 245, 245);
+        color: black;
+        /* display: none;
+        overflow: hidden; */
+        padding: 0 2rem 2.5rem  2rem;
+    }
+
+    .answer p{
+        font-size: 1.2rem;
+        line-height: 1.4;
+
+    }
+
+    .question {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        margin: 10px 0;
+    }
+
+    .question.active {
+        border: none;
+    }
 </style>
+
 <body class="flex flex-col min-h-screen bg-[#f9f5ee] text-gray-900 font-serif">
     <header>
         <nav id="navbar" class="shadow-md top-0 w-full z-20 space-x-6 text-sm font-medium fixed bg-[#f6f4f1]">
@@ -88,5 +154,88 @@
         </nav>
 
     </header>
+
+    <main>
+        <section class="section-faq">
+            <h1>Frequently Asked Questions</h1>
+
+            <div class="question">
+                <button class="accordion">What's the difference between parfum, eau de parfum and eau de toilette?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+
+                <div class="answer">
+                    <p>
+                        The main difference is in fragrance concentration;
+                        Parfum (or extrait de parfum) has the highest concentration and lasts the longest.
+                        Eau de Parfum (EDP) is slightly lighter but still lasts 6 - 8 hours.
+                        Eau de Toilette (EDT) is lighter and ideal for a fresh, everyday scent.
+                    </p>
+                </div>
+            </div>
+
+             <div class="question">
+                <button class="accordion">How long does a perfume last once applied?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+
+                <div class="answer">
+                    <p>
+                       It depends on the concentration and your skin type, but typically:
+                       Parfum: 8-12 hours
+                       Eau de Parfum: 6-8 hours
+                       Eau de Toilette: 3-5 hours
+                       You can reapply or layer with matching lotions to extend the scent.
+                    </p>
+                </div>
+            </div>
+
+             <div class="question">
+                <button class="accordion">Why does perfume smell different on me than in the bottle?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+
+                <div class="answer">
+                    <p>
+                        Your skin's natural oils and pH level can alter
+                         how a fragrance develops. That's why it's 
+                         always best to test a perfume on your skin
+                          before purchasing.
+                    </p>
+                </div>
+            </div>
+             <div class="question">
+                <button class="accordion">How do I choose a perfume that suits me?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+
+                <div class="answer">
+                    <p>
+                       Consider your personal style and when you'll wear
+                        it. For something fresh and light, try citrus
+                        or floral notes. For evening or a bold
+                        impression, try warm, spicy, or woody scents.
+                        Our fragrance experts can help you choose
+                        based on your preferences.
+                    </p>
+                </div>
+            </div>
+
+             <div class="question">
+                <button class="accordion">Are your perfumes authentic?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+
+                <div class="answer">
+                    <p>
+                       Absolutely. We only sell 100% original, authentic
+                        fragrances from trusted brands and suppliers.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+    </main>
 </body>
+
 </html>
