@@ -37,7 +37,7 @@ To run this project on your local machine:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/scents-for-cents.git
+   git clone https://github.com/almamutuguti/ScentsForCents.git
 Navigate to the project folder:
 
 bash
@@ -59,7 +59,7 @@ Save and access your live site at:
 
 Copy
 Edit
-https://your-username.github.io/scents-for-cents/
+https://almamutuguti.github.io/ScentsForCents/
 
 
 
