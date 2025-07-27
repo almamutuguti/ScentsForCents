@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ScentsForCents</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -99,16 +101,16 @@
         text-align: center;
     }
 
-    .section-header h2{
+    .section-header h2 {
         color: bisque;
         font-weight: bold;
         font-size: 3em;
         margin-bottom: 20px;
     }
 
-    .section-header p{
+    .section-header p {
         color: #fff;
-        
+
     }
 
     .row {
@@ -123,24 +125,26 @@
         margin-bottom: 30px;
     }
 
-    .contact-info-icon i{
+    .contact-info-icon i {
         font-size: 20px;
         line-height: 40px;
         color: white;
-        
+
     }
 
     .contact-info-content {
         margin-left: 20px;
     }
-    .contact-info-content h4{
+
+    .contact-info-content h4 {
         color: rgb(255, 136, 0);
         font-size: 1.4em;
         margin-bottom: 5px;
         margin-left: 0px;
 
     }
-    .contact-info-content p{
+
+    .contact-info-content p {
         color: #fff;
         font-size: 1em;
     }
@@ -152,10 +156,10 @@
         padding-bottom: 40px;
         padding-top: 40px;
         border-radius: 10px;
-        
+
     }
 
-    .contact-form h2{
+    .contact-form h2 {
         font-weight: bold;
         font-size: 2em;
         margin-bottom: 10px;
@@ -167,7 +171,7 @@
         position: relative;
         width: 100%;
         margin-top: 10px;
-        
+
     }
 
     .contact-form .input-box input,
@@ -181,10 +185,10 @@
         border-radius: 10px;
         resize: none;
         outline: none;
-        
+
     }
 
-    .contact-form .input-box span{
+    .contact-form .input-box span {
         position: relative;
         left: 0;
         padding: 5px 0;
@@ -195,14 +199,14 @@
         color: #565353;
     }
 
-    .contact-form .input-box input:focus ~ span,
-    .contact-form .input-box textarea ~ span {
+    .contact-form .input-box input:focus~span,
+    .contact-form .input-box textarea~span {
         color: #565353;
         font-size: 14px;
         transform: translateY(-20px);
-        
 
-    } 
+
+    }
 
     .contact-form .input-box input[type="submit"] {
         width: 100%;
@@ -227,20 +231,20 @@
             padding-top: 50px;
             padding-bottom: 50px;
         }
+
         .row {
             flex-direction: column;
         }
+
         .contact-info {
             margin-bottom: 40px;
             width: 100%;
         }
+
         .contact-form {
             width: 100%;
         }
     }
-
-
-
 </style>
 
 <body class="flex flex-col min-h-screen bg-[#f9f5ee] text-gray-900 font-serif">
@@ -291,9 +295,12 @@
         <section class="section-header">
             <div class="box1">
                 <h2>Reach Out To us</h2>
-                <p>We'd love to hear from you. Whether you have a question about our fragrances, need help finding your perfect scent,
-                    or simply want to share your experience, our team is here for you. At ScentsForCents, every message matters because 
-                    behind every bottle is a story, and we're honored to help you discover yours. Reach out and let's make something 
+                <p>We'd love to hear from you. Whether you have a question about our fragrances, need help finding your
+                    perfect scent,
+                    or simply want to share your experience, our team is here for you. At ScentsForCents, every message
+                    matters because
+                    behind every bottle is a story, and we're honored to help you discover yours. Reach out and let's
+                    make something
                     beautiful together
                 </p>
             </div>
@@ -302,7 +309,7 @@
                     <div class="contact-info">
                         <div class="contact-info-item">
                             <div class="contact-info-icon">
-                               <i class="fas fa-home"></i>
+                                <i class="fas fa-home"></i>
                             </div>
                             <div class="contact-info-content">
                                 <h4>Address</h4>
@@ -321,7 +328,7 @@
                                     <br>
                                     +254 706 616 105
                                 </p>
-                                
+
                             </div>
                         </div>
                         <div class="contact-info-item">
@@ -341,28 +348,38 @@
                         <form id="contact-form">
                             <h2>Send Message</h2>
                             <div class="input-box">
-                                <input type="text" required="true">
-                                <span>Full Name/Username</span>
+                                <input type="text" required="true" id="firstName" name="firstName">
+                                <label for="firstName"><span>First Name</span></label>
                             </div>
                             <div class="input-box">
-                                <input type="email" required="true">
-                                <span>Your Email</span>
+                                <input type="text" required="true" id="lastName" name="lastName">
+                                <label for="lastName"><span>Last Name</span></label>
                             </div>
                             <div class="input-box">
-                                <textarea required="true"></textarea>
-                                <span>Type Your Message...</span>
+                                <input type="email" required="true" id="reply-to" name="email">
+                                <label for="email"><span>Your Email</span></label>
+                            </div>
+                            <div class="input-box">
+                                <input type="text" required="true" id="subject" name="subject">
+                                <label for="subject"><span>Subject</span></label>
+                            </div>
+                            <div class="input-box">
+                                <textarea required="true" id="message" rows="5" name="message"></textarea>
+                                <label for="message"><span>Type Your Message...</span></label>
                             </div>
 
                             <div class="input-box">
                                 <input type="submit" value="Send">
                             </div>
-                            
+
                         </form>
+                        <div id="statusMessage"></div>
                     </div>
 
+                    
                 </div>
             </div>
-        </section>  
+        </section>
     </main>
     <footer class="p-4 bg-white sm:p-6 shadow-md rounded-lg">
         <div class="mx-auto max-w-screen-xl border-solid border-black">
@@ -414,6 +431,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="js/contact.js"></script>
 </body>
 
 </html>
